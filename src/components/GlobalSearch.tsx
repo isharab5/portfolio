@@ -64,8 +64,12 @@ export default function GlobalSearch() {
   }, [])
 
   useEffect(() => {
-    if (open) {
-      requestAnimationFrame(() => inputRef.current?.focus())
+    if (!open) return
+
+    requestAnimationFrame(() => inputRef.current?.focus())
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = ''
     }
   }, [open])
 
@@ -138,7 +142,7 @@ export default function GlobalSearch() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] flex items-start justify-center p-4 pt-[12vh] bg-void/80 backdrop-blur-sm"
+            className="fixed inset-0 z-[200] flex items-start justify-center p-4 pt-32 md:pt-40 bg-black/90 backdrop-blur-md"
             onClick={close}
           >
             <motion.div
@@ -146,13 +150,13 @@ export default function GlobalSearch() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -12, scale: 0.98 }}
               transition={{ duration: 0.18 }}
-              className="w-full max-w-2xl glass rounded-2xl border border-border/60 shadow-2xl shadow-accent/10 overflow-hidden"
+              className="w-full max-w-2xl rounded-2xl border border-border/80 bg-[#0a1018] shadow-2xl shadow-black/50 overflow-hidden"
               onClick={(event) => event.stopPropagation()}
               role="dialog"
               aria-modal="true"
               aria-label="Search portfolio"
             >
-              <div className="flex items-center gap-3 px-4 py-3 border-b border-border/50">
+              <div className="flex items-center gap-3 px-4 py-3 border-b border-border/50 bg-[#0d1524]">
                 <Search size={18} className="text-accent shrink-0" />
                 <input
                   ref={inputRef}
@@ -160,7 +164,7 @@ export default function GlobalSearch() {
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder="Search projects, skills, experience, research…"
-                  className="flex-1 bg-transparent outline-none text-sm text-text placeholder:text-muted/60 font-mono"
+                  className="flex-1 bg-transparent outline-none text-sm text-text placeholder:text-muted font-mono"
                   aria-label="Search query"
                 />
                 <button
@@ -173,9 +177,9 @@ export default function GlobalSearch() {
                 </button>
               </div>
 
-              <div className="max-h-[50vh] overflow-y-auto">
+              <div className="max-h-[50vh] overflow-y-auto bg-[#0a1018]">
                 {query.trim().length < 2 ? (
-                  <div className="px-4 py-8 text-center text-sm text-muted font-mono">
+                  <div className="px-4 py-8 text-center text-sm text-muted/90 font-mono">
                     Type at least 2 characters to search across profile, projects, skills, and research.
                   </div>
                 ) : results.length === 0 ? (
