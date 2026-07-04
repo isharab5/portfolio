@@ -1,5 +1,6 @@
 import { Navigate, Routes, Route } from 'react-router-dom'
 import PageHeader from '../components/PageHeader'
+import ProjectJumpNav from '../components/ProjectJumpNav'
 import { SimpleProjectCard, NLPResearchCard, LLMProjectCard } from '../components/ProjectCards'
 import { mlProjects, mlCategoryMeta, nlpProjects, llmFineTuningProjects } from '../data/projects'
 
@@ -49,6 +50,7 @@ function MLSection({ category }: { category: MLCategory }) {
         highlight={meta.highlight}
         description={meta.description}
       />
+      <ProjectJumpNav projects={projects.map((p) => ({ id: p.id, title: p.title }))} />
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <SimpleProjectCard key={project.id} {...project} index={index} />
@@ -61,6 +63,10 @@ function MLSection({ category }: { category: MLCategory }) {
 function NLPSection() {
   const meta = mlCategoryMeta.nlp
   const cyberLlmProject = llmFineTuningProjects.find((p) => p.id === 'cyber-llm')
+  const jumpProjects = [
+    ...nlpProjects.map((p) => ({ id: p.id, title: p.title })),
+    ...(cyberLlmProject ? [{ id: cyberLlmProject.id, title: cyberLlmProject.title }] : []),
+  ]
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
@@ -70,6 +76,7 @@ function NLPSection() {
         highlight={meta.highlight}
         description={meta.description}
       />
+      <ProjectJumpNav projects={jumpProjects} />
       {nlpProjects.map((project, index) => (
         <NLPResearchCard key={project.id} {...project} index={index} />
       ))}

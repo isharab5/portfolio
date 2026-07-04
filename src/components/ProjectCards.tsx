@@ -7,6 +7,7 @@ interface Contribution {
 }
 
 interface AgentProjectProps {
+  id: string
   title: string
   org: string
   role: string
@@ -21,6 +22,7 @@ interface AgentProjectProps {
 }
 
 export function AgentProjectCard({
+  id,
   title,
   org,
   role,
@@ -35,11 +37,12 @@ export function AgentProjectCard({
 }: AgentProjectProps) {
   return (
     <motion.article
+      id={id}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="glass rounded-2xl p-8 md:p-10 mb-10 hover:border-accent/20 transition-all duration-500"
+      className="glass rounded-2xl p-8 md:p-10 mb-10 hover:border-accent/20 transition-all duration-500 scroll-mt-28"
     >
       <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-6">
         <div>
@@ -101,6 +104,7 @@ export function AgentProjectCard({
 }
 
 interface LLMProjectProps {
+  id: string
   title: string
   org: string
   role: string
@@ -120,6 +124,7 @@ interface LLMProjectProps {
 }
 
 export function LLMProjectCard({
+  id,
   title,
   org,
   role,
@@ -133,10 +138,11 @@ export function LLMProjectCard({
 }: LLMProjectProps) {
   return (
     <motion.article
+      id={id}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="glass rounded-2xl p-8 md:p-10"
+      className="glass rounded-2xl p-8 md:p-10 mb-10 hover:border-accent/20 transition-all duration-500 scroll-mt-28"
     >
       <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-6">
         <div>
@@ -239,6 +245,7 @@ export function LLMProjectCard({
 }
 
 interface NLPResearchProjectProps {
+  id: string
   title: string
   org: string
   role: string
@@ -255,6 +262,7 @@ interface NLPResearchProjectProps {
 }
 
 export function NLPResearchCard({
+  id,
   title,
   org,
   role,
@@ -271,11 +279,12 @@ export function NLPResearchCard({
 }: NLPResearchProjectProps) {
   return (
     <motion.article
+      id={id}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="glass rounded-2xl p-8 md:p-10 mb-10 hover:border-accent/20 transition-all duration-500"
+      className="glass rounded-2xl p-8 md:p-10 mb-10 hover:border-accent/20 transition-all duration-500 scroll-mt-28"
     >
       <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-6">
         <div>
@@ -356,6 +365,7 @@ export function NLPResearchCard({
 }
 
 interface SimpleProjectProps {
+  id: string
   title: string
   org?: string
   period?: string
@@ -369,6 +379,7 @@ interface SimpleProjectProps {
 }
 
 export function SimpleProjectCard({
+  id,
   title,
   org,
   period,
@@ -384,11 +395,12 @@ export function SimpleProjectCard({
 
   return (
     <motion.article
+      id={id}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.08 }}
-      className={`glass rounded-2xl overflow-hidden hover:border-accent/20 transition-all duration-300 ${
+      className={`glass rounded-2xl overflow-hidden hover:border-accent/20 transition-all duration-300 scroll-mt-28 ${
         hasMedia ? 'md:col-span-2' : ''
       }`}
     >

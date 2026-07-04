@@ -1,5 +1,6 @@
 import { Navigate, Routes, Route } from 'react-router-dom'
 import PageHeader from '../components/PageHeader'
+import ProjectJumpNav from '../components/ProjectJumpNav'
 import { SimpleProjectCard } from '../components/ProjectCards'
 import { fullStackProjects, fullStackCategoryMeta } from '../data/projects'
 
@@ -17,6 +18,7 @@ function FullStackSection({ category }: { category: FullStackCategory }) {
         highlight={meta.highlight}
         description={meta.description}
       />
+      <ProjectJumpNav projects={projects.map((p) => ({ id: p.id, title: p.title }))} />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <SimpleProjectCard key={project.id} {...project} index={index} />
