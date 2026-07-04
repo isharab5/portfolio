@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" fill="none">
+  <rect width="500" height="420" fill="#0a0a12"/>
+  <text x="250" y="30" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="13">Attack Classification Confusion Matrix</text>
+
+  <!-- Labels -->
+  <text x="250" y="55" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="10">Predicted Label</text>
+  <text x="30" y="220" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="10" transform="rotate(-90 30 220)">Actual Label</text>
+
+  <!-- Column headers -->
+  <text x="155" y="80" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="9">Normal</text>
+  <text x="235" y="80" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="9">DoS</text>
+  <text x="315" y="80" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="9">Probe</text>
+  <text x="395" y="80" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="9">R2L</text>
+
+  <!-- Row headers -->
+  <text x="85" y="135" text-anchor="end" fill="#e2e8f0" font-family="monospace" font-size="9">Normal</text>
+  <text x="85" y="195" text-anchor="end" fill="#e2e8f0" font-family="monospace" font-size="9">DoS</text>
+  <text x="85" y="255" text-anchor="end" fill="#e2e8f0" font-family="monospace" font-size="9">Probe</text>
+  <text x="85" y="315" text-anchor="end" fill="#e2e8f0" font-family="monospace" font-size="9">R2L</text>
+
+  <!-- Matrix cells - diagonal high values -->
+  <!-- Row 1: Normal -->
+  <rect x="115" y="105" width="70" height="50" fill="#00f0ff50" stroke="#00f0ff" stroke-width="1"/>
+  <text x="150" y="135" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="14" font-weight="bold">962</text>
+  <rect x="195" y="105" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="230" y="135" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">8</text>
+  <rect x="275" y="105" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="310" y="135" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">12</text>
+  <rect x="355" y="105" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="390" y="135" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">5</text>
+
+  <!-- Row 2: DoS -->
+  <rect x="115" y="165" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="150" y="195" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">6</text>
+  <rect x="195" y="165" width="70" height="50" fill="#10b98150" stroke="#10b981" stroke-width="1"/>
+  <text x="230" y="195" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="14" font-weight="bold">487</text>
+  <rect x="275" y="165" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="310" y="195" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">11</text>
+  <rect x="355" y="165" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="390" y="195" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">3</text>
+
+  <!-- Row 3: Probe -->
+  <rect x="115" y="225" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="150" y="255" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">9</text>
+  <rect x="195" y="225" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="230" y="255" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">7</text>
+  <rect x="275" y="225" width="70" height="50" fill="#7c3aed50" stroke="#7c3aed" stroke-width="1"/>
+  <text x="310" y="255" text-anchor="middle" fill="#7c3aed" font-family="monospace" font-size="14" font-weight="bold">312</text>
+  <rect x="355" y="225" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="390" y="255" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">14</text>
+
+  <!-- Row 4: R2L -->
+  <rect x="115" y="285" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="150" y="315" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">4</text>
+  <rect x="195" y="285" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="230" y="315" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">2</text>
+  <rect x="275" y="285" width="70" height="50" fill="#7c3aed15" stroke="#1a1a2e"/>
+  <text x="310" y="315" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="12">8</text>
+  <rect x="355" y="285" width="70" height="50" fill="#f59e0b50" stroke="#f59e0b" stroke-width="1"/>
+  <text x="390" y="315" text-anchor="middle" fill="#f59e0b" font-family="monospace" font-size="14" font-weight="bold">89</text>
+
+  <!-- Color scale -->
+  <text x="250" y="365" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Macro F1-Score: 0.91 | Accuracy: 94.2%</text>
+  <rect x="150" y="380" width="200" height="12" rx="2" fill="url(#heatmap)"/>
+  <text x="140" y="390" fill="#64748b" font-family="monospace" font-size="8">Low</text>
+  <text x="360" y="390" fill="#64748b" font-family="monospace" font-size="8">High</text>
+
+  <defs>
+    <linearGradient id="heatmap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f0f1a"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#00f0ff"/>
+    </linearGradient>
+  </defs>
+</svg>

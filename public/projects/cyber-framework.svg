@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" fill="none">
+  <rect width="900" height="420" fill="#0a0a12"/>
+  <text x="450" y="30" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="14">Semi-Supervised LLM Cyber Attack Detection Framework</text>
+
+  <!-- Raw Data -->
+  <rect x="30" y="60" width="140" height="80" rx="8" fill="#0f0f1a" stroke="#1a1a2e" stroke-width="1.5"/>
+  <text x="100" y="90" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="11">Network Logs</text>
+  <text x="100" y="108" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Unlabeled Data</text>
+  <text x="100" y="125" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">(Large Volume)</text>
+
+  <rect x="30" y="160" width="140" height="80" rx="8" fill="#0f0f1a" stroke="#1a1a2e" stroke-width="1.5"/>
+  <text x="100" y="190" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="11">Labeled Attacks</text>
+  <text x="100" y="208" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Small Corpus</text>
+  <text x="100" y="225" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">(Limited Labels)</text>
+
+  <!-- Arrow 1 -->
+  <path d="M170 100 L220 140" stroke="#00f0ff" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M170 200 L220 160" stroke="#00f0ff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Preprocessing -->
+  <rect x="230" y="110" width="150" height="100" rx="8" fill="#0f0f1a" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="305" y="145" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="11">Tokenization &</text>
+  <text x="305" y="163" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="11">Feature Extraction</text>
+  <text x="305" y="185" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">SpaCy · NLTK</text>
+
+  <path d="M380 160 L430 160" stroke="#00f0ff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Semi-Supervised -->
+  <rect x="440" y="80" width="160" height="160" rx="8" fill="#0f0f1a" stroke="#10b981" stroke-width="2"/>
+  <text x="520" y="115" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="12" font-weight="bold">Semi-Supervised</text>
+  <text x="520" y="135" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="12" font-weight="bold">Learning</text>
+  <text x="520" y="165" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Pseudo-Labeling</text>
+  <text x="520" y="182" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Consistency Reg.</text>
+  <text x="520" y="199" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Self-Training</text>
+
+  <path d="M600 160 L650 160" stroke="#00f0ff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Fine-tuned LLM -->
+  <rect x="660" y="60" width="200" height="200" rx="8" fill="#0f0f1a" stroke="#00f0ff" stroke-width="2"/>
+  <text x="760" y="95" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="12" font-weight="bold">Fine-Tuned LLM</text>
+  <text x="760" y="115" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="12" font-weight="bold">Encoder</text>
+  <rect x="680" y="130" width="70" height="30" rx="4" fill="#7c3aed20" stroke="#7c3aed" stroke-width="1"/>
+  <text x="715" y="150" text-anchor="middle" fill="#7c3aed" font-family="monospace" font-size="10">BERT</text>
+  <rect x="770" y="130" width="70" height="30" rx="4" fill="#7c3aed20" stroke="#7c3aed" stroke-width="1"/>
+  <text x="805" y="150" text-anchor="middle" fill="#7c3aed" font-family="monospace" font-size="10">LLaMA</text>
+  <text x="760" y="185" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Hugging Face Transformers</text>
+  <text x="760" y="202" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">PyTorch · CUDA</text>
+  <text x="760" y="235" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Contextual Embeddings</text>
+
+  <!-- Output -->
+  <path d="M760 260 L760 300" stroke="#00f0ff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="620" y="310" width="280" height="80" rx="8" fill="#0f0f1a" stroke="#10b981" stroke-width="1.5"/>
+  <text x="760" y="340" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="11">Attack Classification & Anomaly Detection</text>
+  <text x="760" y="360" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Threat Types · Anomaly Scores · Security Alerts</text>
+  <text x="760" y="378" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Intelligent Security Monitoring Dashboard</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6" fill="#00f0ff"/>
+    </marker>
+  </defs>
+</svg>

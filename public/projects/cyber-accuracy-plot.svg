@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" fill="none">
+  <rect width="600" height="380" fill="#0a0a12"/>
+  <text x="300" y="30" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="13">Detection Accuracy Comparison</text>
+
+  <!-- Y-axis -->
+  <line x1="80" y1="60" x2="80" y2="300" stroke="#1a1a2e" stroke-width="1"/>
+  <text x="40" y="65" fill="#64748b" font-family="monospace" font-size="9">100%</text>
+  <text x="40" y="125" fill="#64748b" font-family="monospace" font-size="9">90%</text>
+  <text x="40" y="185" fill="#64748b" font-family="monospace" font-size="9">80%</text>
+  <text x="40" y="245" fill="#64748b" font-family="monospace" font-size="9">70%</text>
+  <text x="40" y="300" fill="#64748b" font-family="monospace" font-size="9">60%</text>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="120" x2="560" y2="120" stroke="#1a1a2e" stroke-width="0.5" stroke-dasharray="4"/>
+  <line x1="80" y1="180" x2="560" y2="180" stroke="#1a1a2e" stroke-width="0.5" stroke-dasharray="4"/>
+  <line x1="80" y1="240" x2="560" y2="240" stroke="#1a1a2e" stroke-width="0.5" stroke-dasharray="4"/>
+
+  <!-- Bars -->
+  <!-- Signature-based: 72% -->
+  <rect x="120" y="228" width="60" height="72" rx="4" fill="#64748b40" stroke="#64748b" stroke-width="1"/>
+  <text x="150" y="220" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="10">72%</text>
+  <text x="150" y="320" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">Signature</text>
+
+  <!-- Supervised DL: 87% -->
+  <rect x="220" y="162" width="60" height="138" rx="4" fill="#7c3aed40" stroke="#7c3aed" stroke-width="1"/>
+  <text x="250" y="154" text-anchor="middle" fill="#7c3aed" font-family="monospace" font-size="10">87%</text>
+  <text x="250" y="320" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">Supervised</text>
+  <text x="250" y="332" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">DL Only</text>
+
+  <!-- Semi-Supervised: 91% -->
+  <rect x="320" y="138" width="60" height="162" rx="4" fill="#10b98140" stroke="#10b981" stroke-width="1"/>
+  <text x="350" y="130" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="10">91%</text>
+  <text x="350" y="320" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">Semi-</text>
+  <text x="350" y="332" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">Supervised</text>
+
+  <!-- Proposed LLM: 94.2% -->
+  <rect x="420" y="115" width="60" height="185" rx="4" fill="#00f0ff30" stroke="#00f0ff" stroke-width="2"/>
+  <text x="450" y="107" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="10" font-weight="bold">94.2%</text>
+  <text x="450" y="320" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="8">Proposed</text>
+  <text x="450" y="332" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="8">LLM Model</text>
+
+  <!-- X-axis -->
+  <line x1="80" y1="300" x2="560" y2="300" stroke="#1a1a2e" stroke-width="1"/>
+
+  <!-- Legend -->
+  <rect x="180" y="350" width="240" height="20" rx="4" fill="#0f0f1a" stroke="#1a1a2e"/>
+  <text x="300" y="364" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">Proposed model outperforms baselines on cybersecurity attack detection</text>
+</svg>
